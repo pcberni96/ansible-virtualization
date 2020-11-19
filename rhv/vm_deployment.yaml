@@ -8,16 +8,16 @@
          hostname: rhvm.csrh.local
          insecure: yes
          username: admin@internal
-         password: "{{ password-admin }}"
+         password: "{{ passwordadmin }}"
      
   tasks:
     - name: Create VM from template 
       ovirt_vm:
         auth: "{{ ovirt_auth }}"
-        cluster: "{{ cluster-name }}"
-        template: "{{ template-name }}"
-        name: "{{ fdqn-vm }}"
-        memory: "{{ memory-number }}"
+        cluster: "{{ clustername }}"
+        template: "{{ templatename }}"
+        name: "{{ fdqnvm }}"
+        memory: "{{ memorynumber }}"
 
    
    post_tasks:

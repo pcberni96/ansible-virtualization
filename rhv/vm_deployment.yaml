@@ -18,10 +18,8 @@
         template: "{{ templatename }}"
         name: "{{ fdqnvm }}"
         memory: "{{ memorynumber }}"
-
-   
-   post_tasks:
-     - name: Logout from oVirt
-       ovirt_auth:
-         ovirt_auth: "{{ ovirt_auth }}"
-         state: absent
+    
+    - name: Logout from oVirt
+      ovirt_auth:
+        ovirt_auth: "{{ ovirt_auth }}"
+        state: absent

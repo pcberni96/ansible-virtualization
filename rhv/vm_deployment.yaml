@@ -5,7 +5,7 @@
   pre_tasks:
      - name: Login to oVirt-RHV
        ovirt_auth:
-         hostname: rhvm.csrh.local
+         hostname: "{{ rhvm }}"
          insecure: yes
          username: admin@internal
          password: "{{ passwordadmin }}"
